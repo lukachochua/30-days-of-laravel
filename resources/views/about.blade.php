@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About page</title>
-</head>
-
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+<x-layout>
+    <x-slot:heading>
+        About Page
+    </x-slot:heading>
     <h1>Hello from the About Page.</h1>
-</body>
-
-</html>
+</x-layout>
