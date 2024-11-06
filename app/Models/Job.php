@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Job extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'job_listings';
 
     protected $fillable = ['title', 'salary'];
@@ -17,5 +17,10 @@ class Job extends Model
     public function employer()
     {
         return $this->BelongsTo(Employer::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, foreignPivotKey:'job_listing_id');
     }
 }
