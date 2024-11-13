@@ -10,6 +10,7 @@ class JobPolicy
 {
     public function edit(User $user, Job $job): bool
     {
+        // dd($job->employer->user);
         return $job->employer->user->is($user);
     }
 }
